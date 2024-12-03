@@ -1,29 +1,30 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+    background: url('https://source.unsplash.com/random/1920x1080/?abstract,technology') no-repeat center center fixed;
+    background-size: cover;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #fff;
 }
 
 .container {
     width: 80%;
-    margin: 0 auto;
-    background-color: #fff;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
 }
 
 header {
     text-align: center;
     padding-bottom: 10px;
-    border-bottom: 2px solid #0077b6;
+    border-bottom: 3px solid #f77f00;
 }
 
 h1 {
-    font-size: 2.5em;
-    color: #0077b6;
+    font-size: 3em;
+    color: #d62828;
     margin: 0;
 }
 
@@ -33,11 +34,13 @@ h1 {
 
 .contact-info a {
     color: #0077b6;
+    font-weight: bold;
     text-decoration: none;
 }
 
 .contact-info a:hover {
     text-decoration: underline;
+    color: #f77f00;
 }
 
 section {
@@ -45,10 +48,11 @@ section {
 }
 
 h2 {
-    color: #0077b6;
-    border-bottom: 2px solid #0077b6;
+    color: #023e8a;
+    border-bottom: 3px solid #f77f00;
     display: inline-block;
     padding-bottom: 5px;
+    font-size: 2em;
 }
 
 .entry {
@@ -56,8 +60,8 @@ h2 {
 }
 
 .entry h3 {
-    font-size: 1.5em;
-    color: #005f73;
+    font-size: 1.8em;
+    color: #f77f00;
 }
 
 .entry .date {
@@ -70,8 +74,9 @@ h2 {
 }
 
 ul {
-    list-style-type: square;
+    list-style-type: circle;
     padding-left: 20px;
+    color: #333;
 }
 
 .skills-grid {
@@ -81,22 +86,29 @@ ul {
 
 .skill-category {
     width: 30%;
+    background-color: #ffbe0b;
+    padding: 15px;
+    border-radius: 8px;
+    color: #333;
 }
 
 .skill-category h3 {
-    color: #005f73;
+    color: #6a0572;
+    margin-bottom: 10px;
 }
 
 .skill-category p {
-    background-color: #e0f7fa;
+    background-color: #f1faee;
     padding: 10px;
     border-radius: 5px;
 }
 
 a {
-    color: #0077b6;
+    color: #03045e;
+    font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
+    color: #8d0801;
 }
