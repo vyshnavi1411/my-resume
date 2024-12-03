@@ -4,182 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vyshnavi Kusukuntla - Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #3498db;
-            --secondary-color: #2ecc71;
-            --text-color: #2c3e50;
-            --background-color: #ecf0f1;
+            --primary-color: #4a90e2;
+            --secondary-color: #50c878;
+            --background-color: #f4f7f6;
         }
 
-        * {
+        body, html {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            background: var(--background-color);
+            scroll-behavior: smooth;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: var(--text-color);
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            background: white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        .header {
+        .parallax {
+            background-image: linear-gradient(rgba(74,144,226,0.7), rgba(80,200,120,0.7)), url('/api/placeholder/1200/400');
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             display: flex;
             align-items: center;
-            background: var(--primary-color);
+            justify-content: center;
             color: white;
+            text-align: center;
+        }
+
+        .profile-container {
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.9);
             padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .profile-pic {
-            width: 200px;
-            height: 200px;
+            width: 250px;
+            height: 250px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid white;
             margin-right: 30px;
+            border: 5px solid var(--primary-color);
         }
 
-        .header-content {
-            flex-grow: 1;
-        }
-
-        .header-content h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .sections {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            padding: 30px;
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
         }
 
         .section {
-            background: #f9f9f9;
+            background: white;
             border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .section h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 10px;
-            margin-bottom: 15px;
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
         }
 
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .tag {
+        .skill-tag {
             background: var(--primary-color);
             color: white;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.8em;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            transform: scale(1.05);
         }
 
         @media (max-width: 768px) {
-            .container {
-                margin: 20px;
-            }
-            .header {
+            .profile-container {
                 flex-direction: column;
                 text-align: center;
             }
-            .sections {
-                grid-template-columns: 1fr;
+            .profile-pic {
+                margin-right: 0;
+                margin-bottom: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
+    <div class="parallax">
+        <div class="profile-container">
             <img src="your-profile-picture.jpg" alt="Vyshnavi Kusukuntla" class="profile-pic">
-            <div class="header-content">
+            <div>
                 <h1>Vyshnavi Kusukuntla</h1>
-                <p>Computer Science Student | Aspiring Software Developer</p>
-                <div class="contact-info">
-                    <a href="mailto:vyshnavi.kusukuntla@gmail.com">
-                        <i class="fas fa-envelope"></i> Email
-                    </a>
-                    <a href="https://linkedin.com/in/vyshnavi-kusukuntla-339867297">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/vyshnavi1411">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </div>
+                <p>Computer Science Student | Aspiring Tech Innovator</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="section">
+            <h2>About Me</h2>
+            <p>Passionate computer science student with a strong interest in software development and emerging technologies. Committed to continuous learning and solving real-world problems through innovative technological solutions.</p>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <h3>Lovely Professional University</h3>
+            <p>Bachelor of Science in Computer Science</p>
+            <p>Expected Graduation: July 2027</p>
+            <p>Current GPA: 9.09</p>
+        </div>
+
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">C++</div>
+                <div class="skill-tag">Java</div>
+                <div class="skill-tag">Data Structures</div>
+                <div class="skill-tag">Algorithms</div>
+                <div class="skill-tag">Git</div>
             </div>
         </div>
 
-        <div class="sections">
-            <div class="section">
-                <h2>Education</h2>
-                <strong>Lovely Professional University</strong>
-                <p>Bachelor of Science in Computer Science</p>
-                <p>Expected Graduation: July 2027</p>
-                <p>GPA: 9.09</p>
-            </div>
-
-            <div class="section">
-                <h2>Skills</h2>
-                <div class="skill-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">C++</span>
-                    <span class="tag">Java</span>
-                    <span class="tag">DSA</span>
-                    <span class="tag">Git</span>
-                    <span class="tag">GitHub</span>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>Projects</h2>
-                <strong>Personal Portfolio Website</strong>
-                <p>Developed a responsive personal website using modern web technologies</p>
-            </div>
-
-            <div class="section">
-                <h2>Interests</h2>
-                <div class="skill-tags">
-                    <span class="tag">Software Development</span>
-                    <span class="tag">Machine Learning</span>
-                    <span class="tag">Web Technologies</span>
-                </div>
-            </div>
+        <div class="section">
+            <h2>Projects</h2>
+            <h3>Personal Portfolio Website</h3>
+            <p>Designed and developed a responsive personal portfolio showcasing technical skills and projects</p>
         </div>
     </div>
 </body>
