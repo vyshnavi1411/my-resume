@@ -10,6 +10,7 @@
             --secondary-color: #3498db;
             --text-color: #333;
             --background-color: #f4f4f4;
+            --hover-transition: all 0.3s ease;
         }
 
         * {
@@ -32,48 +33,59 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             border-radius: 10px;
             overflow: hidden;
+            transition: var(--hover-transition);
         }
 
         .header {
             background-color: var(--primary-color);
             color: white;
-            text-align: center;
             padding: 2rem;
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-name {
+            text-align: center;
+            margin-bottom: 0.5rem;
         }
 
         .header h1 {
             font-size: 2.5rem;
-            margin-bottom: 0.5rem;
         }
 
         .header p {
             color: var(--secondary-color);
             font-size: 1.2rem;
+            margin-bottom: 1rem;
         }
 
         .contact-info {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            text-align: right;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .contact-info a {
             color: white;
             text-decoration: none;
-            display: block;
-            margin-bottom: 0.3rem;
-            transition: color 0.3s ease;
+            transition: var(--hover-transition);
         }
 
         .contact-info a:hover {
             color: var(--secondary-color);
+            transform: scale(1.1);
         }
 
         .section {
             padding: 1.5rem;
             border-bottom: 1px solid #eee;
+            transition: var(--hover-transition);
+        }
+
+        .section:hover {
+            background-color: #f9f9f9;
         }
 
         .section h2 {
@@ -81,28 +93,46 @@
             border-bottom: 2px solid var(--secondary-color);
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
+            transition: var(--hover-transition);
+            display: inline-block;
+        }
+
+        .section h2:hover {
+            color: var(--secondary-color);
+            transform: scale(1.05);
+            border-bottom-color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        .section p {
+            transition: var(--hover-transition);
+        }
+
+        .section:hover p {
+            transform: translateX(10px);
+            color: var(--primary-color);
         }
 
         .job, .education {
             margin-bottom: 1.5rem;
             position: relative;
             padding-left: 20px;
+            transition: var(--hover-transition);
         }
 
-        .job::before, .education::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 5px;
-            width: 10px;
-            height: 10px;
-            background-color: var(--secondary-color);
-            border-radius: 50%;
+        .job:hover, .education:hover {
+            transform: translateX(10px);
         }
 
         .job-title {
             font-weight: bold;
             color: var(--primary-color);
+            transition: var(--hover-transition);
+        }
+
+        .job-title:hover {
+            color: var(--secondary-color);
+            transform: scale(1.05);
         }
 
         .skills {
@@ -117,11 +147,14 @@
             padding: 0.3rem 0.7rem;
             border-radius: 20px;
             font-size: 0.9rem;
-            transition: background-color 0.3s ease;
+            transition: var(--hover-transition);
+            display: inline-block;
         }
 
         .skill-tag:hover {
             background-color: var(--primary-color);
+            transform: scale(1.1);
+            cursor: pointer;
         }
 
         .projects {
@@ -134,12 +167,24 @@
             background-color: #f9f9f9;
             border-radius: 8px;
             padding: 1rem;
-            transition: transform 0.3s ease;
+            transition: var(--hover-transition);
+            border: 2px solid transparent;
         }
 
         .project-card:hover {
             transform: scale(1.05);
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-color: var(--secondary-color);
+        }
+
+        .project-card h3 {
+            color: var(--primary-color);
+            transition: var(--hover-transition);
+        }
+
+        .project-card h3:hover {
+            color: var(--secondary-color);
+            transform: scale(1.1);
         }
 
         @media (max-width: 600px) {
@@ -154,10 +199,12 @@
 <body>
     <div class="resume-container">
         <div class="header">
-            <h1>Vyshnavi Kusukuntla</h1>
-            <p>Aspiring DevOps Engineer</p>
+            <div class="header-name">
+                <h1>Vyshnavi Kusukuntla</h1>
+                <p>Aspiring DevOps Engineer</p>
+            </div>
             <div class="contact-info">
-                <a href="vyshnavi.kusukuntla@gmail.com">vyshnavi.kusukuntla@gmail.com</a>
+                <a href="mailto:vyshnavi.kusukuntla@gmail.com">vyshnavi.kusukuntla@gmail.com</a>
                 <a href="tel:+91 9676023214">+91 9676023214</a>
                 <a href="https://www.linkedin.com/in/vyshnavi-kusukuntla-339867297/">LinkedIn</a>
                 <a href="https://github.com/vyshnavi1411">Github</a>
@@ -198,6 +245,7 @@
                     <li>Professional Insights: Gain valuable knowledge about real-world DevOps challenges and solutions, preparing you for practical application in the tech industry.</li>
                 </ul>
             </div>
+        </div>
 
         <div class="section">
             <h2>Skills</h2>
@@ -217,15 +265,11 @@
             <div class="projects">
                 <div class="project-card">
                     <h3>E-commerce Platform</h3>
-                    <p>Developed a fully functional e-commerce website with features like product listings, shopping cart, and user authentication.
-
-                        Built dynamic product pages using HTML, CSS, and JavaScript.</p>
+                    <p>Developed a fully functional e-commerce website with features like product listings, shopping cart, and user authentication. Built dynamic product pages using HTML, CSS, and JavaScript.</p>
                 </div>
                 <div class="project-card">
                     <h3>Zapier Automation for Class Reminders</h3>
-                    <p>Automated class reminders using Zapier by integrating Google Calendar and Gmail to enhance time management and productivity.
-
-                        Designed and implemented a Zap that sends automated email reminders for classes 15 minutes before start time.</p>
+                    <p>Automated class reminders using Zapier by integrating Google Calendar and Gmail to enhance time management and productivity. Designed and implemented a Zap that sends automated email reminders for classes 15 minutes before start time.</p>
                 </div>
             </div>
         </div>
