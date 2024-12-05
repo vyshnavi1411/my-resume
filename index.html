@@ -3,135 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Resume - Interactive</title>
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --text-color: #333;
-            --background-color: #f4f4f4;
-            --hover-color: #34495e;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            transition: all 0.3s ease;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
-
-        .resume-container {
-            max-width: 800px;
-            margin: 2rem auto;
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .section {
-            padding: 1.5rem;
-            border-bottom: 1px solid #eee;
-            position: relative;
-            transition: all 0.4s ease;
-        }
-
-        .section:hover {
-            background-color: #f0f4f8;
-            transform: scale(1.02);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .section h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-            transition: color 0.3s ease;
-        }
-
-        .section:hover h2 {
-            color: var(--secondary-color);
-        }
-
-        .section p, .section .job, .section .education {
-            opacity: 0.9;
-            transition: all 0.3s ease;
-        }
-
-        .section:hover p, .section:hover .job, .section:hover .education {
-            transform: translateX(10px);
-            opacity: 1;
-        }
-
-        /* Rest of the original styles remain the same */
-        .header {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            position: relative;
-        }
-
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.3rem;
-            transition: color 0.3s ease;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skill-tag {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 0.3rem 0.7rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            transition: transform 0.3s ease;
-        }
-
-        .skill-tag:hover {
-            transform: scale(1.1);
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .project-card {
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            padding: 1rem;
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: scale(1.05);
-        }
-
-        @media (max-width: 600px) {
-            .resume-container {
-                margin: 0;
-                width: 100%;
-                border-radius: 0;
-            }
-        }
-    </style>
+    <title>Vyshnavi Kusukuntla - Resume</title>
+    <link rel="stylesheet" href="resume-styles.css">
 </head>
 <body>
     <div class="resume-container">
@@ -139,10 +12,10 @@
             <h1>Vyshnavi Kusukuntla</h1>
             <p>Aspiring DevOps Engineer</p>
             <div class="contact-info">
-                <a href="mailto:vyshnavi.kusukuntla@gmail.com">vyshnavi.kusukuntla@gmail.com</a>
-                <a href="tel:+91 9676023214">+91 9676023214</a>
+                <a href="mailto:vyshnavi.kusukuntla@gmail.com">Email</a>
+                <a href="tel:+91 9676023214">Phone</a>
                 <a href="https://www.linkedin.com/in/vyshnavi-kusukuntla-339867297/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/vyshnavi1411" target="_blank">Github</a>
+                <a href="https://github.com/vyshnavi1411" target="_blank">GitHub</a>
             </div>
         </div>
 
@@ -153,18 +26,18 @@
 
         <div class="section">
             <h2>Education</h2>
-            <div class="education">
-                <div class="job-title">Bachelor of Science in Computer Science</div>
-                <p>Lovely Professional University,Phagwara</p>
+            <div>
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p>Lovely Professional University, Phagwara</p>
                 <p>Expected Graduation: 2027</p>
             </div>
-            <div class="education">
-                <div class="job-title">Higher Secondary Education</div>
-                <p>Narayana Junior college,Hyderabad</p>
+            <div>
+                <h3>Higher Secondary Education</h3>
+                <p>Narayana Junior College, Hyderabad</p>
                 <p>Grade: 97%</p>
             </div>
-            <div class="education">
-                <div class="job-title">Secondary School Education</div>
+            <div>
+                <h3>Secondary School Education</h3>
                 <p>Central Board of Secondary Education, Mancherial</p>
                 <p>Grade: 95%</p>
             </div>
@@ -172,12 +45,12 @@
 
         <div class="section">
             <h2>Work Experience</h2>
-            <div class="job">
-                <div class="job-title">Xebia</div>
+            <div>
+                <h3>Xebia</h3>
                 <ul>
                     <li>Industry-Aligned Practices: Learn DevOps methodologies and tools directly from Xebia's expert instructors, aligned with industry standards.</li>
                     <li>Hands-On Workshops: Engage in practical sessions, implementing CI/CD pipelines, automation, and containerization using tools like Jenkins, Docker, and Kubernetes.</li>
-                    <li>Professional Insights: Gain valuable knowledge about real-world DevOps challenges and solutions, preparing you for practical application in the tech industry.</li>
+                    <li>Professional Insights: Gain valuable knowledge about real-world DevOps challenges and solutions.</li>
                 </ul>
             </div>
         </div>
@@ -200,15 +73,11 @@
             <div class="projects">
                 <div class="project-card">
                     <h3>E-commerce Platform</h3>
-                    <p>Developed a fully functional e-commerce website with features like product listings, shopping cart, and user authentication.
-
-                        Built dynamic product pages using HTML, CSS, and JavaScript.</p>
+                    <p>Developed a fully functional e-commerce website with product listings, shopping cart, and user authentication.</p>
                 </div>
                 <div class="project-card">
                     <h3>Zapier Automation for Class Reminders</h3>
-                    <p>Automated class reminders using Zapier by integrating Google Calendar and Gmail to enhance time management and productivity.
-
-                        Designed and implemented a Zap that sends automated email reminders for classes 15 minutes before start time.</p>
+                    <p>Automated class reminders using Zapier by integrating Google Calendar and Gmail for enhanced time management.</p>
                 </div>
             </div>
         </div>
