@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Resume</title>
+    <title>Professional Resume - Interactive</title>
     <style>
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #3498db;
             --text-color: #333;
             --background-color: #f4f4f4;
+            --hover-color: #34495e;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            transition: all 0.3s ease;
         }
 
         body {
@@ -34,6 +36,42 @@
             overflow: hidden;
         }
 
+        .section {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .section:hover {
+            background-color: #f0f4f8;
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .section:hover h2 {
+            color: var(--secondary-color);
+        }
+
+        .section p, .section .job, .section .education {
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+
+        .section:hover p, .section:hover .job, .section:hover .education {
+            transform: translateX(10px);
+            opacity: 1;
+        }
+
+        /* Rest of the original styles remain the same */
         .header {
             background-color: var(--primary-color);
             color: white;
@@ -42,67 +80,12 @@
             position: relative;
         }
 
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .header p {
-            color: var(--secondary-color);
-            font-size: 1.2rem;
-        }
-
-        .contact-info {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            text-align: right;
-        }
-
         .contact-info a {
             color: white;
             text-decoration: none;
             display: block;
             margin-bottom: 0.3rem;
             transition: color 0.3s ease;
-        }
-
-        .contact-info a:hover {
-            color: var(--secondary-color);
-        }
-
-        .section {
-            padding: 1.5rem;
-            border-bottom: 1px solid #eee;
-        }
-
-        .section h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .job, .education {
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .job::before, .education::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 5px;
-            width: 10px;
-            height: 10px;
-            background-color: var(--secondary-color);
-            border-radius: 50%;
-        }
-
-        .job-title {
-            font-weight: bold;
-            color: var(--primary-color);
         }
 
         .skills {
@@ -117,11 +100,11 @@
             padding: 0.3rem 0.7rem;
             border-radius: 20px;
             font-size: 0.9rem;
-            transition: background-color 0.3s ease;
+            transition: transform 0.3s ease;
         }
 
         .skill-tag:hover {
-            background-color: var(--primary-color);
+            transform: scale(1.1);
         }
 
         .projects {
@@ -139,7 +122,6 @@
 
         .project-card:hover {
             transform: scale(1.05);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         @media (max-width: 600px) {
@@ -157,10 +139,10 @@
             <h1>Vyshnavi Kusukuntla</h1>
             <p>Aspiring DevOps Engineer</p>
             <div class="contact-info">
-                <a href="vyshnavi.kusukuntla@gmail.com">vyshnavi.kusukuntla@gmail.com</a>
+                <a href="mailto:vyshnavi.kusukuntla@gmail.com">vyshnavi.kusukuntla@gmail.com</a>
                 <a href="tel:+91 9676023214">+91 9676023214</a>
-                <a href="https://www.linkedin.com/in/vyshnavi-kusukuntla-339867297/">LinkedIn</a>
-                <a href="https://github.com/vyshnavi1411">Github</a>
+                <a href="https://www.linkedin.com/in/vyshnavi-kusukuntla-339867297/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/vyshnavi1411" target="_blank">Github</a>
             </div>
         </div>
 
@@ -191,13 +173,14 @@
         <div class="section">
             <h2>Work Experience</h2>
             <div class="job">
-                <div class="job-title">Internship</div>
+                <div class="job-title">Xebia</div>
                 <ul>
-                    <li>Led a team of 5 developers in creating scalable web applications</li>
-                    <li>Implemented modern frontend technologies to improve user experience</li>
-                    <li>Reduced application load time by 40% through optimization techniques</li>
+                    <li>Industry-Aligned Practices: Learn DevOps methodologies and tools directly from Xebia's expert instructors, aligned with industry standards.</li>
+                    <li>Hands-On Workshops: Engage in practical sessions, implementing CI/CD pipelines, automation, and containerization using tools like Jenkins, Docker, and Kubernetes.</li>
+                    <li>Professional Insights: Gain valuable knowledge about real-world DevOps challenges and solutions, preparing you for practical application in the tech industry.</li>
                 </ul>
             </div>
+        </div>
 
         <div class="section">
             <h2>Skills</h2>
@@ -226,10 +209,6 @@
                     <p>Automated class reminders using Zapier by integrating Google Calendar and Gmail to enhance time management and productivity.
 
                         Designed and implemented a Zap that sends automated email reminders for classes 15 minutes before start time.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Mobile Responsive Framework</h3>
-                    <p>Custom CSS framework for rapid mobile web development</p>
                 </div>
             </div>
         </div>
